@@ -1,6 +1,6 @@
 import { drawTimer, setupTimer } from '../components/timer';
 import { setupControls } from '../components/controls';
-import { scene } from './map';
+import * as config from './map';
 
 function setup() {
   // setupTimer();
@@ -9,7 +9,8 @@ function setup() {
 
 function draw() {
   // drawTimer();
-  scene.loadTileset(scene.tiles);
+  // scene.loadTileset(scene.tiles);
+  config;
 }
 
 export { draw, setup };

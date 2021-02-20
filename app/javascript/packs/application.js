@@ -30,7 +30,7 @@ import { interaction } from '../components/interaction';
 import { defineControls } from '../components/controls';
 // import { animate } from "../channels/script"
 import * as map from "../maps/japanese_house.json"
-import { scene } from "../components/map";
+import { config } from "../components/map";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -40,7 +40,9 @@ window.setup = () => {
   setup();
   // interaction();
 };
-window.draw = draw;
+window.draw = () => {
+  draw();
+} 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
