@@ -1,5 +1,5 @@
 import { drawTimer, setupTimer } from '../components/timer';
-import { drawControls, setupControls } from '../components/controls';
+import { setupControls } from '../components/controls';
 
 function setup() {
   setupTimer();
@@ -8,7 +8,6 @@ function setup() {
 
 function draw() {
   drawTimer();
-  drawControls();
 }
 
 export { draw, setup };
