@@ -1,12 +1,13 @@
 //import { char } from;
 import { controls } from '../components/controls';
 
+const login = document.querySelector("#login")
+
 function interaction () { 
   let objectsClickable = document.querySelectorAll(".clickable")
-  console.log(controls);
 
   document.addEventListener("keyup", (event) => {
-    if (event.key == interactKey) {
+    if (event.key == controls["Interact"]) {
       objectsClickable.forEach((object) => {
         if (frontObject(object)) {
           object.classList.add("active")

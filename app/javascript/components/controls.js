@@ -9,6 +9,14 @@ let rightKey = "d";
 let interactKey = "e";
 let key
 
+const controls =  {
+  Up:upKey,
+  Down:downKey,
+  Left:leftKey,
+  Right:rightKey,
+  Interact:interactKey,
+}
+
 function drawControls() {
   noStroke();
   fill(100, 100, 200);
@@ -21,21 +29,10 @@ function drawControls() {
     if (i == 150) {key = "Interact"}
     fill(240);
     textSize(15);
-    text(key + " key:", (width / 3) + 20, 25 + i)
-    text(controls[key], 2*width/3 - 30, i + 25)
-    fill(0)
-    rect((2*width)/3 - 30, i + 15, 30, 30)
-
-
+    text(key + " key:", (windowWidth / 3) + 20, 25 + i)
+    fill(200,30,30)
+    text(controls[key], 2*windowWidth/3 - 30, i + 25)
   }
-}
-
-const controls =  {
-  Up:upKey,
-  Down:downKey,
-  Left:leftKey,
-  Right:rightKey,
-  Interact:interactKey, 
 }
 
 export { controls, drawControls, setupControls };
