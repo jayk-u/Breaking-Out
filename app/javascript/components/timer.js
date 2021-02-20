@@ -3,7 +3,7 @@ let s = 0
 let ms = 0
 let startDate = Date.now()
 
-function setup() {
+function setupTimer() {
   createCanvas(windowWidth, windowHeight);
 }
 
@@ -43,8 +43,8 @@ function timer() {
   text(chrono(), 10, 65);
 }
 
-function draw() {
+function drawTimer() {
   timer();
 }
 
-export { draw, setup };
+export { drawTimer, setupTimer };

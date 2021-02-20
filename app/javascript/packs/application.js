@@ -24,14 +24,18 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { draw, setup } from '../components/timer';
+import { draw, setup } from '../components/setup';
+import { interaction } from '../components/interaction';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 // The following codelines are used to initialize setup and draw of the timer (as of now, only timer.js uses the setup and draw function)
-// window.setup = setup;
-// window.draw = draw;
+window.setup = () => {
+  setup();
+  interaction();
+};
+window.draw = draw;
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
