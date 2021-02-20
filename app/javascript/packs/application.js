@@ -28,6 +28,7 @@ import * as modals from "../components/modals";
 import { draw, setup } from '../components/setup';
 import { interaction } from '../components/interaction';
 import { defineControls } from '../components/controls';
+import { animate } from "../channels/script"
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -44,4 +45,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   modals;
   defineControls();
+  animate();
 });
