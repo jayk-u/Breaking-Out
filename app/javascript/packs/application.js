@@ -24,9 +24,15 @@ require("channels")
 
 // External imports
 import "bootstrap";
+
 import { animate } from "../channels/script"
+import { draw, setup } from '../components/timer';
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+
+window.setup = setup;
+window.draw = draw;
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
