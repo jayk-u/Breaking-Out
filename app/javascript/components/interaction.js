@@ -1,8 +1,6 @@
 //import { char } from;
 import { controls } from '../components/controls';
 
-const login = document.querySelector("#login")
-
 function interaction () { 
   let objectsClickable = document.querySelectorAll(".clickable")
 
