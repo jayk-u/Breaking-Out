@@ -1,13 +1,15 @@
 import { drawTimer, setupTimer } from '../components/timer';
 import { setupControls } from '../components/controls';
+import { scene } from './map';
 
 function setup() {
-  setupTimer();
+  // setupTimer();
   setupControls();
 }
 
 function draw() {
-  drawTimer();
+  // drawTimer();
+  scene.loadTileset(scene.tiles);
 }
 
 export { draw, setup };
