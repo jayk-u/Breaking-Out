@@ -1,6 +1,6 @@
 import { controls } from '../components/controls'
 
-const canvas = document.getElementById('canvas1');
+var canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 // console.log(canvas.getContext);
 // console.log(ctx);
@@ -9,7 +9,7 @@ canvas.height = 500;
 const playerSprite = new Image();
 playerSprite.src = "/images/hulk.png";
 const background = new Image();
-background.src = "/images/map.png"
+background.src = "/images/japanese_house.png"
 
 const keys = [];
 
@@ -30,17 +30,17 @@ const drawSprite = (img, sX, sY, sW, sH, dX, dY, dW, dH) => {
 
 const movePlayer = () => {
   if (Object.keys(keys).length == 1) {
-    if (keys[controls["Upkey"]] && player.y > 100) {
+    if (keys[controls["Upkey"]] && player.y > 95) {
       player.y -= player.speed;
       player.frameY = 3;
       player.moving = true;
     }
-    if (keys[controls["Downkey"]] && player.y < canvas.height - player.height) { // 446
+    if (keys[controls["Downkey"]] && player.y < 370) { // 446
       player.y += player.speed;
       player.frameY = 0;
       player.moving = true;
     }
-    if (keys[controls["Leftkey"]] && player.x > 0) {
+    if (keys[controls["Leftkey"]] && player.x > 15) {
       player.x -= player.speed;
       player.frameY = 1;
       player.moving = true;
@@ -112,4 +112,4 @@ const animate = () => {
 }
 startAnimating(50);
 
-export { animate };
+export { animate, canvas };

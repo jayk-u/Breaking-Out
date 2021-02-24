@@ -198,7 +198,9 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"..\/MainTileMap.tsx"
+         "source":"/images/japanese_house.png",
+         "imagewidth":864,
+         "imageheight":416
         }],
  "tilewidth":32,
  "type":"map",

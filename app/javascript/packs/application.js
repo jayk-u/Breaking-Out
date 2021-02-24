@@ -25,10 +25,10 @@ require("channels")
 // External imports
 import "bootstrap";
 import * as modals from "../components/modals";
-import { draw, setup } from '../components/setup';
+import { draw, setup, preload } from '../components/setup';
 import { interaction } from '../components/interaction';
 import { defineControls } from '../components/controls';
-// import { animate } from "../channels/script"
+import { animate } from "../channels/script"
 import * as map from "../maps/japanese_house.json"
 import { scene } from "../components/map";
 
@@ -36,6 +36,8 @@ import { scene } from "../components/map";
 // import { initSelect2 } from '../components/init_select2';
 
 // The following codelines are used to initialize setup and draw of the timer (as of now, only timer.js uses the setup and draw function)
+window.preload = preload;
+
 window.setup = () => {
   setup();
   // interaction();
@@ -47,5 +49,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   modals;
   defineControls();
-  // animate();
+  animate();
 });
