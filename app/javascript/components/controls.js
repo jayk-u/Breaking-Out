@@ -2,12 +2,6 @@ function setupControls() {
   createCanvas(windowWidth, windowHeight)
 }
 
-let upKey = "z";
-let downKey = "s";
-let leftKey = "q";
-let rightKey = "d";
-let interactKey = "e";
-
 function defineControls() {
   const controldefiners = document.querySelectorAll(".controlKeys")
   controldefiners.forEach(definer => {
@@ -27,11 +21,11 @@ function defineControls() {
 }
 
 let controls =  {
-  Upkey:upKey,
-  Downkey:downKey,
-  Leftkey:leftKey,
-  Rightkey:rightKey,
-  Interactkey:interactKey,
+  Upkey:'z',
+  Downkey:'s',
+  Leftkey:'q',
+  Rightkey:'d',
+  Interactkey:'e',
 }
 
 // Obsolete -- abandonned cuz too ugly

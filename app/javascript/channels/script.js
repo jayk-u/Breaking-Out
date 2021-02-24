@@ -1,3 +1,5 @@
+import { controls } from '../components/controls'
+
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 // console.log(canvas.getContext);
@@ -28,22 +30,22 @@ const drawSprite = (img, sX, sY, sW, sH, dX, dY, dW, dH) => {
 
 const movePlayer = () => {
   if (Object.keys(keys).length == 1) {
-    if (keys[38] && player.y > 100) {
+    if (keys[controls["Upkey"]] && player.y > 100) {
       player.y -= player.speed;
       player.frameY = 3;
       player.moving = true;
     }
-    if (keys[40] && player.y < canvas.height - player.height) { // 446
+    if (keys[controls["Downkey"]] && player.y < canvas.height - player.height) { // 446
       player.y += player.speed;
       player.frameY = 0;
       player.moving = true;
     }
-    if (keys[37] && player.x > 0) {
+    if (keys[controls["Leftkey"]] && player.x > 0) {
       player.x -= player.speed;
       player.frameY = 1;
       player.moving = true;
     }
-    if (keys[39] && player.x < canvas.width - player.width) { // 764
+    if (keys[controls["Rightkey"]] && player.x < canvas.width - player.width) { // 764
       player.x += player.speed;
       player.frameY = 2;
       player.moving = true;
@@ -62,14 +64,15 @@ const handlePlayerFrame = () => {
 window.addEventListener("keydown", (event) => {
   // console.log(Object(event));
   // console.log(event);
-  keys[event.keyCode] = true;
+  console.log(event)
+  console.log(keys[event])
+  keys[event.key] = true;
   player.moving = true;
 });
 
 window.addEventListener("keyup", (event) => {
   // console.log(event);
-  delete keys[event.keyCode];
-  console.log(keys);
+  delete keys[event.key];
   player.moving = false;
 });
 
